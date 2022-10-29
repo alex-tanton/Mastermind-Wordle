@@ -13,8 +13,8 @@ public class Player {
         System.out.print("New player, please enter your name: ");
         this.name = input.nextLine();
 
-        System.out.print(this.name + ", please enter a valid, 5 letter word that your opponent will guess: ");
-        this.word = new Word(input.nextLine());
+        System.out.print(this.name + ", please enter a valid word that your opponent will attempt guess: ");
+        this.word = new Word(input.nextLine().toLowerCase());
 
         input.reset();
     }
