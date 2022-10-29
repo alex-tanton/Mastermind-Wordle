@@ -7,10 +7,11 @@ public class Main {
         Player p2 = new Player();
 
         // Variables for loop
-        Scanner input = new Scanner(System.in);
         String guess;
         Player winner;
         int turns = 1;
+
+        Scanner input = new Scanner(System.in);
 
         // Keep players guessing until one wins
         while (true) {

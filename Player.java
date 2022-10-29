@@ -6,10 +6,11 @@ public class Player {
     private String name;
     private Word word;
 
+    // Constructor takes inputs from user for name and word
     public Player() {
         input.reset();
 
-        System.out.print("Please enter your name: ");
+        System.out.print("New player, please enter your name: ");
         this.name = input.nextLine();
 
         System.out.print(this.name + ", please enter a valid, 5 letter word that your opponent will guess: ");
