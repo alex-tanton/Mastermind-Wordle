@@ -56,5 +56,6 @@ public class Main {
         System.out.println(winner.get_name() + " won in " + turns + " guesses!");
     }
 
+    // Clears console output, works on most devices, not necessarily all
     public static void clear_output() { System.out.print("\033[H\033[2J"); }
 }
