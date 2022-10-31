@@ -53,6 +53,6 @@ public class Main {
 
         input.close();
 
-        System.out.println("\n" + winner.get_name() + " won in " + turns + " guesses!");
+        System.out.println(winner.get_name() + " won in " + turns + " guesses!");
     }
 }

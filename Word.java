@@ -10,7 +10,9 @@ public class Word {
 
     public boolean make_guess(String str) {
         // Set status at respective index true if word and guess char matches
-        for (int i = 0; i < this.word.length(); i++) {
+        for (int i = 0; i < str.length(); i++) {
+            // Exit loop if index out of range error will occur
+            if (this.word.length() == i) { break; }
             if (this.word.charAt(i) == str.charAt(i)) { this.status[i] = true; }
         }
 
