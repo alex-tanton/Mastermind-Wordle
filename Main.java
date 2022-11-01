@@ -1,6 +1,5 @@
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
-import java.io.File;
 
 public class Main {
     public static void main(String[] args) {
