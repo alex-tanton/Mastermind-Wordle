@@ -2,7 +2,6 @@ public class Word {
     private String word;
     private boolean[] status;
 
-
     /**
      * Creates a word object with attribute of word, which is the string literal of the
      * word, and status, which is an array of booleans representing if any letter has
