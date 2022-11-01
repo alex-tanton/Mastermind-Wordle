@@ -2,18 +2,32 @@ public class Word {
     private String word;
     private boolean[] status;
 
-    // Constructor stores word and an array of letter statuses
-    public Word(String str) {
-        this.word = str;
-        this.status = new boolean[str.length()];
+
+    /**
+     * Creates a word object with attribute of word, which is the string literal of the
+     * word, and status, which is an array of booleans representing if any letter has
+     * been correctly guessed
+     *
+     * @param str     The string of the word to be stored
+     */
+    public Word(String word) {
+        this.word = word;
+        this.status = new boolean[word.length()];
     }
 
-    public boolean make_guess(String str) {
-        // Set status at respective index true if word and guess char matches
-        for (int i = 0; i < str.length(); i++) {
-            // Exit loop if index out of range error will occur
+    /**
+     * This method takes a guess for the word and updates status to reflect any
+     * correct letters, if all letters correct, return true, else, return false
+     *
+     * @param guess     The word to be guessed
+     * @return          Returns true if word fully guessed
+     */
+    public boolean make_guess(String guess) {
+        for (int i = 0; i < guess.length(); i++) {
+            // Exit loop if index out of range error will occur, otherwise update status
             if (this.word.length() == i) { break; }
-            if (this.word.charAt(i) == str.charAt(i)) { this.status[i] = true; }
+            // Set status at respective index true if word and guess char matches
+            if (this.word.charAt(i) == guess.charAt(i)) { this.status[i] = true; }
         }
 
         // Return true if all status true, false otherwise
@@ -21,7 +35,10 @@ public class Word {
         return true;
     }
 
-    // Displays word, using letters for knowns and _ for unknowns
+    /**
+     * This method prints the known letters of a word, substituting an "_"
+     * for unknown letters, each letter is separated by a space
+     */
     public void display() {
         for (int i = 0; i < this.word.length(); i++) {
             if (this.status[i]) { System.out.print(this.word.charAt(i)); }
@@ -31,10 +48,17 @@ public class Word {
         System.out.println();
     }
 
-    // Getters
+    /* GETTERS */
+
+    /**
+     * @return     The string literal of the word
+     */
     public String get_string() {
         return this.word;
     }
+    /**
+     * @return     The array of all status values for each letter in word
+     */
     public boolean[] get_status() {
         return this.status;
     }

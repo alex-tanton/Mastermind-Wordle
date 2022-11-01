@@ -1,1 +1,0 @@
-Wordle but opponent picks the word you guess, vice versa

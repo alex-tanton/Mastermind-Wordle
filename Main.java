@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
+import java.io.File;
 
 public class Main {
     public static void main(String[] args) {
@@ -33,7 +34,7 @@ public class Main {
             // Take player 1 guess after providing word info
             p2.get_word().display();
             System.out.print(p1.get_name() + ", make a guess: ");
-            guess = input.nextLine().toLowerCase();
+            guess = input.nextLine().toUpperCase();
             clear_output();
 
             // Check if guess is correct, display known letters if incorrect
@@ -42,7 +43,7 @@ public class Main {
             // Take player 2 guess after providing word info
             p1.get_word().display();
             System.out.print(p2.get_name() + ", make a guess: ");
-            guess = input.nextLine().toLowerCase();
+            guess = input.nextLine().toUpperCase();
             clear_output();
 
             // Check if guess is correct, display known letters if incorrect
